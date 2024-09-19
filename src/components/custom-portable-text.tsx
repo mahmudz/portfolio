@@ -2,7 +2,11 @@ import { PortableTextComponents } from "@portabletext/react";
 import { codeToHtml } from "shiki";
 import CopyToClipooard from "./copy-to-clipboard";
 
-async function CodeBlock({ value }) {
+async function CodeBlock({
+  value,
+}: {
+  value: { language: string; code: string };
+}) {
   const out = await codeToHtml(value.code, {
     lang: value.language,
     theme: "catppuccin-mocha",

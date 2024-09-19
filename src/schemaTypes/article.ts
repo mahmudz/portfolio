@@ -66,7 +66,7 @@ const article = {
       date: "date",
       media: "coverImage",
     },
-    prepare(selection) {
+    prepare(selection: any) {
       const { isPublished, date } = selection;
       return {
         ...selection,
