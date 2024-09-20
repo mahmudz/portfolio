@@ -6,7 +6,7 @@ export default async function ProjectsIndexPage() {
 
   return (
     <section>
-      <h2 className="font-semibold">Projects</h2>
+      <h2 className="font-semibold pb-2">Projects</h2>
 
       <div className="space-y-2">
         {projects.map((project, index) => (

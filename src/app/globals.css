@@ -70,7 +70,9 @@
 }
 
 @layer utilities {
-  .link {
-    @apply text-amber-400 dark:text-orange-200 underline hover:no-underline;
+
+  .link,
+  article a {
+    @apply text-amber-600 dark:text-orange-200 underline hover:no-underline;
   }
 }

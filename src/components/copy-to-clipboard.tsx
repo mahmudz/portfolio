@@ -18,9 +18,9 @@ export default function CopyToClipooard({ content }: { content: string }) {
   return (
     <button onClick={handleClipboard}>
       {!status ? (
-        <CopyIcon />
+        <CopyIcon size={20} />
       ) : (
-        <CheckIcon className="text-secondary-color transition" />
+        <CheckIcon size={20} className="text-secondary-color transition" />
       )}
     </button>
   );
