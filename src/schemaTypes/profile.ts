@@ -12,6 +12,12 @@ const profile = {
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "nickName",
+      title: "Nick Name",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "headline",
       title: "Headline",
       type: "string",
@@ -35,8 +41,8 @@ const profile = {
     {
       name: "shortBio",
       title: "Short Bio",
-      type: "text",
-      rows: 4,
+      type: "array",
+      of: [{ type: "block" }],
     },
     {
       name: "email",
@@ -76,18 +82,6 @@ const profile = {
           title: "Linkedin URL",
           type: "url",
           initialValue: "https://linkedin.com/in/",
-        },
-        {
-          name: "twitter",
-          title: "Twitter URL",
-          type: "url",
-          initialValue: "https://twitter.com/",
-        },
-        {
-          name: "twitch",
-          title: "Twitch URL",
-          type: "url",
-          initialValue: "https://twitch.com/",
         },
       ],
       options: {

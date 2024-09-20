@@ -7,9 +7,11 @@ import {
   getWorks,
   getArticles,
 } from "@/sanity/sanity.query";
+import { PortableText } from "next-sanity";
 import Link from "next/link";
 
 export default async function Home() {
+  const profile = await getProfile();
   const articles = await getArticles();
   const works = await getWorks();
   const projects = await getFeaturedProjects();
@@ -18,17 +20,9 @@ export default async function Home() {
     <div className="flex flex-col gap-8">
       <article className="prose dark:prose-invert">
         <p>
-          Hi, I'm <em>Mahmudul Hasan</em>.
+          Hi, I'm <em>{profile.nickName}</em> 👋.
         </p>
-        <p>
-          I'm an experienced software developer passionate about learning and
-          building software that is beneficial for humans and the world at
-          large.
-        </p>
-        <p>
-          I like poking on emarging technologies & constantly try to improve
-          myself.
-        </p>
+        <PortableText value={profile.shortBio} />
       </article>
 
       <section>
@@ -47,7 +41,7 @@ export default async function Home() {
       </section>
 
       <section>
-        <h4 className="font-semibold">Work</h4>
+        <h4 className="font-semibold pb-2">Work</h4>
 
         <div className="space-y-2">
           {works.map((work, index) => (

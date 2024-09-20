@@ -1,12 +1,13 @@
 import { groq } from "next-sanity";
 import client from "./sanity.client";
-import { ArticleType, ProjectType, WorkType } from "@/types";
+import { ArticleType, ProfileType, ProjectType, WorkType } from "@/types";
 
-export async function getProfile() {
+export async function getProfile(): Promise<ProfileType> {
   return client.fetch(
-    groq`*[_type == "profile"]{
+    groq`*[_type == "profile"][0]{
       _id,
       fullName,
+      nickName,
       headline,
       profileImage {alt, "image": asset->url},
       shortBio,
