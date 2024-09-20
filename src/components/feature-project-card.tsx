@@ -17,6 +17,7 @@ export function FeaturedProjectCard({ project }: { project: ProjectType }) {
           <Link
             className="link transform relative"
             href={project.projectUrl}
+            aria-label={`Visit ${project.projectUrl}`}
             target="_blank"
           >
             <ArrowUpRightIcon />
