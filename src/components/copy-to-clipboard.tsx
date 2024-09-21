@@ -20,7 +20,7 @@ export default function CopyToClipooard({ content }: { content: string }) {
       {!status ? (
         <CopyIcon size={20} />
       ) : (
-        <CheckIcon size={20} className="text-secondary-color transition" />
+        <CheckIcon size={20} className="text-emerald-300 transition" />
       )}
     </button>
   );

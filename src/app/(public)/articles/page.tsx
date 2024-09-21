@@ -9,6 +9,9 @@ export default async function ArticleIndexPage() {
       <h2 className="font-semibold pb-2">Articles</h2>
 
       <div className="space-y-2">
+        {articles.length === 0 && (
+          <p className="text-muted-foreground">Nothing here yet.</p>
+        )}
         {articles.map((article, index) => (
           <ArticleListCard key={index} article={article} />
         ))}

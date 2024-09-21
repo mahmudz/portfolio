@@ -11,11 +11,11 @@ export default function WorkCard({ work }: { work: WorkType }) {
           </Link>
         )}
         {!work.url && <p className="link">{work.companyName}</p>}
-        <p>{work.jobTitle}</p>
+        <p className="text-slate-700 dark:text-slate-300">{work.jobTitle}</p>
       </div>
 
       <div className="flex justify-between items-center gap-2">
-        <span className="text-gray-400">
+        <span className="text-gray-500 dark:text-gray-400">
           {work.startDate &&
             Intl.DateTimeFormat("en", {
               month: "short",

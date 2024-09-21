@@ -50,20 +50,22 @@ export default async function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="pb-2 flex justify-between items-center">
-          <h4 className="font-semibold">Writings</h4>
-          <Link className="link" href={"/articles"}>
-            View all
-          </Link>
-        </div>
+      {articles.length > 0 && (
+        <section>
+          <div className="pb-2 flex justify-between items-center">
+            <h4 className="font-semibold">Writings</h4>
+            <Link className="link" href={"/articles"}>
+              View all
+            </Link>
+          </div>
 
-        <div className="space-y-2">
-          {articles.map((article, index) => (
-            <ArticleListCard key={index} article={article} />
-          ))}
-        </div>
-      </section>
+          <div className="space-y-2">
+            {articles.map((article, index) => (
+              <ArticleListCard key={index} article={article} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
