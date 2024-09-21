@@ -3,13 +3,23 @@ import Link from "next/link";
 
 export function ArticleListCard({ article }: { article: ArticleType }) {
   return (
-    <div className="py-2 dark:text-slate-300">
+    <div className="py-2 flex justify-between items-center">
       <div>
         <Link className="link" href={`/articles/${article.slug}`}>
           {article.title}
         </Link>
-        <p>{article.time_requires_to_read}</p>
+        <p className="text-slate-700 dark:text-slate-300">
+          {article.time_requires_to_read}
+        </p>
       </div>
+
+      <time className="text-gray-500 dark:text-gray-400">
+        {Intl.DateTimeFormat("en", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        }).format(new Date(article.date))}
+      </time>
     </div>
   );
 }

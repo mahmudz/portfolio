@@ -88,8 +88,9 @@ export async function getFeaturedProjects(): Promise<ProjectType[]> {
 
 export async function getArticles(): Promise<ArticleType[]> {
   return client.fetch(
-    groq`*[_type == "article"]{
+    groq`*[_type == "article"][published == true]{
       title,
+      date,
       time_requires_to_read,
       "slug": slug.current,
     }`
@@ -98,7 +99,7 @@ export async function getArticles(): Promise<ArticleType[]> {
 
 export async function getArticle(slug: string): Promise<ArticleType> {
   return client.fetch(
-    groq`*[_type == "article" && slug.current == $slug][0]{
+    groq`*[_type == "article" && published == true && slug.current == $slug][0]{
       title,
       time_requires_to_read,
       "slug": slug.current,
