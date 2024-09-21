@@ -25,6 +25,16 @@ const profile = {
       validation: (Rule) => Rule.required().min(10).max(50),
     }),
     {
+      name: "email",
+      title: "Email Address",
+      type: "string",
+    },
+    {
+      name: "location",
+      title: "Location",
+      type: "string",
+    },
+    {
       name: "profileImage",
       title: "Profile Image",
       type: "image",
@@ -43,16 +53,6 @@ const profile = {
       title: "Short Bio",
       type: "array",
       of: [{ type: "block" }],
-    },
-    {
-      name: "email",
-      title: "Email Address",
-      type: "string",
-    },
-    {
-      name: "location",
-      title: "Location",
-      type: "string",
     },
     {
       name: "fullBio",
