@@ -24,6 +24,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link
+        rel="icon"
+        href="/favicon-light.png"
+        sizes="any"
+        media="(prefers-color-scheme: light)"
+      />
+      <link
+        rel="icon"
+        href="/favicon-dark.png"
+        sizes="any"
+        media="(prefers-color-scheme: dark)"
+      />
       <body className={cn(font.className, "transition scroll-smooth")}>
         <ThemeProvider
           attribute="class"
