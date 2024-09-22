@@ -36,6 +36,11 @@ export default function RootLayout({
         sizes="any"
         media="(prefers-color-scheme: dark)"
       />
+      <script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="490c0b19-c0bd-4841-8232-ab0ad1dd0a48"
+      ></script>
       <body className={cn(font.className, "transition scroll-smooth")}>
         <ThemeProvider
           attribute="class"
