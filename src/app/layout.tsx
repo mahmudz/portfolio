@@ -24,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(font.className, "transition scroll-smooth scrollbar")}
-      >
+      <body className={cn(font.className, "transition scroll-smooth")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
