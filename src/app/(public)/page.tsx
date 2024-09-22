@@ -1,71 +1,18 @@
-import { ArticleListCard } from "@/components/article-list-card";
-import { FeaturedProjectCard } from "@/components/feature-project-card";
-import WorkCard from "@/components/work-card";
-import {
-  getProfile,
-  getFeaturedProjects,
-  getWorks,
-  getArticles,
-} from "@/sanity/sanity.query";
-import { PortableText } from "next-sanity";
-import Link from "next/link";
+import ArticlesSection from "@/components/pages/home/articles-section";
+import IntroSection from "@/components/pages/home/intro-section";
+import ProjectsSection from "@/components/pages/home/projects-section";
+import WorksSection from "@/components/pages/home/works-section";
 
-export default async function Home() {
-  const profile = await getProfile();
-  const articles = await getArticles();
-  const works = await getWorks();
-  const projects = await getFeaturedProjects();
-
+export default function Home() {
   return (
     <div className="flex flex-col gap-8">
-      <article className="prose dark:prose-invert">
-        <p>
-          Hi, I'm <em>{profile.nickName}</em> 👋.
-        </p>
-        <PortableText value={profile.shortBio} />
-      </article>
+      <IntroSection />
 
-      <section>
-        <div className="pb-2 flex justify-between items-center">
-          <p className="font-semibold">Projects</p>
-          <Link className="link" href={"/projects"}>
-            View all
-          </Link>
-        </div>
+      <ProjectsSection />
 
-        <div className="grid grid-cols-1 gap-2">
-          {projects.map((project, index) => (
-            <FeaturedProjectCard key={index} project={project} />
-          ))}
-        </div>
-      </section>
+      <WorksSection />
 
-      <section>
-        <h4 className="font-semibold pb-2">Work</h4>
-
-        <div className="space-y-2">
-          {works.map((work, index) => (
-            <WorkCard key={index} work={work} />
-          ))}
-        </div>
-      </section>
-
-      {articles.length > 0 && (
-        <section>
-          <div className="pb-2 flex justify-between items-center">
-            <h4 className="font-semibold">Writings</h4>
-            <Link className="link" href={"/articles"}>
-              View all
-            </Link>
-          </div>
-
-          <div className="space-y-2">
-            {articles.map((article, index) => (
-              <ArticleListCard key={index} article={article} />
-            ))}
-          </div>
-        </section>
-      )}
+      <ArticlesSection />
     </div>
   );
 }

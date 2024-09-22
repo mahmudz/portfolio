@@ -38,6 +38,7 @@ export default function RootLayout({
       />
       <script
         defer
+        async
         src="https://cloud.umami.is/script.js"
         data-website-id="490c0b19-c0bd-4841-8232-ab0ad1dd0a48"
       ></script>
