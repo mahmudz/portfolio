@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Mahmudul Hasan",
   description: "Maybe a good developer",
   openGraph: {
-    title: "Mahmudul Hasan",
+    title: "Mahmudul Hasan | Full Stack Developer",
   },
 };
 
