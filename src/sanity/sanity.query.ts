@@ -43,6 +43,7 @@ export async function getProjects(): Promise<ProjectType[]> {
     name,
     tagline,
     "slug": slug.current,
+    type,
     projectUrl,
     "logo": logo.asset->url,
     }`
@@ -56,6 +57,7 @@ export async function getProject(slug: string): Promise<ProjectType> {
     name,
     tagline,
     "slug": slug.current,
+    type,
     projectUrl,
     "logo": logo.asset->url,
     "coverImage": coverImage.asset->url,
@@ -75,6 +77,7 @@ export async function getFeaturedProjects(): Promise<ProjectType[]> {
     name,
     tagline,
     "slug": slug.current,
+    type,
     projectUrl,
     "logo": logo.asset->url,
     coverImage,

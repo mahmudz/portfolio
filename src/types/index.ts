@@ -32,6 +32,7 @@ export type ProjectType = {
   name: string;
   tagline: string;
   slug: string;
+  type: "client-work" | "company-project" | "side-project" | "open-source";
   logo: {
     image: string;
   };

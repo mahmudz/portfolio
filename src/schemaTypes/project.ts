@@ -30,6 +30,19 @@ const project = {
       validation: (rule) => rule.required(),
     }),
     {
+      title: "Type",
+      name: "type",
+      type: "string",
+      options: {
+        list: [
+          { title: "Client Work", value: "client-work" },
+          { title: "Company Work", value: "company-project" },
+          { title: "Side Project", value: "side-project" },
+          { title: "Open Source", value: "open-source" },
+        ],
+      },
+    },
+    {
       name: "logo",
       title: "Project Logo",
       type: "image",

@@ -17,13 +17,17 @@ export default async function ProjectDetails({
       </nav>
 
       <article className="prose max-w-none dark:prose-invert">
-        <div className="bg-gray-900 border min-h-80 max-h-96 w-full overflow-hidden rounded-md flex justify-center items-center">
-          {project.coverImage ? (
-            <img src={project.coverImage} className="" alt="" />
-          ) : (
+        {project.coverImage ? (
+          <img
+            src={project.coverImage}
+            className="border rounded-md w-full"
+            alt=""
+          />
+        ) : (
+          <div className="bg-gray-50 dark:bg-gray-900 border min-h-80 max-h-96 w-full overflow-hidden rounded-md flex justify-center items-center">
             <h1 className="m-0">{project.name}</h1>
-          )}
-        </div>
+          </div>
+        )}
 
         <nav className="flex justify-between items-center">
           <h4>{project.name}</h4>
