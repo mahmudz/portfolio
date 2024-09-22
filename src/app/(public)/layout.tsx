@@ -1,6 +1,8 @@
 import NavLogo from "@/components/nav-logo";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({
   children,
 }: Readonly<{
