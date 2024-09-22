@@ -21,6 +21,7 @@ export type ProfileType = {
 export type WorkType = {
   companyName: string;
   jobTitle: string;
+  description: string;
   logo?: string;
   url?: string;
   startDate?: string;

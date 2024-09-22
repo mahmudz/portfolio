@@ -27,6 +27,7 @@ export async function getWorks(): Promise<WorkType[]> {
       _id,
       companyName,
       jobTitle,
+      description,
       "logo": logo.asset->url,
       url,
       startDate,
