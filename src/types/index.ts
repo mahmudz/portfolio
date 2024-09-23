@@ -29,6 +29,7 @@ export type WorkType = {
 };
 
 export type ProjectType = {
+  _id: string;
   name: string;
   tagline: string;
   slug: string;
