@@ -54,7 +54,10 @@ export default function ProjectTypeBadge({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="cursor-pointer group" onClick={() => setExpanded(true)}>
+    <button
+      className="cursor-pointer group block"
+      onClick={() => setExpanded(true)}
+    >
       <motion.div
         animate={expanded ? "expanded" : "notExpanded"}
         initial="notExpanded"
@@ -68,6 +71,6 @@ export default function ProjectTypeBadge({
           {types[project.type].label}
         </motion.div>
       </motion.div>
-    </div>
+    </button>
   );
 }
