@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio Website
+
+This is a personal portfolio website built using **Next.js** for the frontend and **Sanity.io** as the content management system (CMS). It showcases my projects, skills, and experience as a developer, and it is fully customizable through Sanity Studio.
+
+## Table of Contents
+
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Development Server](#running-the-development-server)
+- [Deployment](#deployment)
+- [License](#license)
+
+## Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org/docs)
+- **CMS**: [Sanity.io](https://www.sanity.io)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/docs)
+- **Other**: [Umami](https://umami.is) for analytics
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (>= 18.x.x)
+- NPM or Yarn
+
+### CMS Configuration (Sanity.io)
+
+- Create and account on the platform
+- Create a project
+- Get the project id to store in env file
+
+### For analytics
+
+- Create an account on [umami.is](https://umami.is/)
+- Add your website
+- Get website id to store in env file
+
+### Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/mahmudz/portfolio.git
+   cd portfolio
+   ```
+
+2. **Update the keys in env file**:
+
+   - Copy the `.env.example` to to `.env.local`
+   - Update the values
+
+3. **Install dependencies**:
+   If using npm:
+
+   ```bash
+   npm install
+   ```
+
+   If using yarn:
+
+   ```bash
+   yarn install
+   ```
+
+### Running the Development Server
+
+Start the Next.js development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the portfolio in the browser. The page will automatically reload as you make changes to the code.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit [http://localhost:3000/studio](http://localhost:3000/studio) to manage CMS data of [Sanity.io](https://www.sanity.io)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
 
-## Learn More
+This website can be deployed easily to hosting services like **Vercel**. The simplest way is to link your GitHub repository to Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+To deploy on Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your code to GitHub.
+2. Visit [https://vercel.com](https://vercel.com) and create a new project.
+3. Connect your GitHub repo and follow the deployment steps.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Once deployed, you can still manage your CMS using your domain for vercel `https://your-website-address/studio`.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
