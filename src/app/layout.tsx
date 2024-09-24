@@ -40,7 +40,7 @@ export default function RootLayout({
         defer
         async
         src="https://cloud.umami.is/script.js"
-        data-website-id="490c0b19-c0bd-4841-8232-ab0ad1dd0a48"
+        data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID!}
       ></script>
       <body className={cn(font.className, "transition scroll-smooth")}>
         <ThemeProvider

@@ -9,8 +9,8 @@ export default defineConfig({
   title: "Demo",
   basePath: "/studio",
 
-  projectId: "3xska0hg",
-  dataset: "production",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
 
   plugins: [structureTool(), visionTool(), codeInput()],
 
