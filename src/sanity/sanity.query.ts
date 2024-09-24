@@ -36,11 +36,9 @@ export async function getWorks(): Promise<WorkType[]> {
   );
 }
 
-export async function getProjects(
-  lastId: string | null
-): Promise<ProjectType[]> {
+export async function getProjects(): Promise<ProjectType[]> {
   return client.fetch(
-    groq`*[_type == "project" && _id > $lastId][0...10]{
+    groq`*[_type == "project"]{
     _id,
     name,
     tagline,
@@ -48,10 +46,7 @@ export async function getProjects(
     type,
     projectUrl,
     "logo": logo.asset->url,
-    }`,
-    {
-      lastId,
-    }
+    }`
   );
 }
 
