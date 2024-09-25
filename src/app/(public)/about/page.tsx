@@ -4,7 +4,9 @@ import { PortableText } from "@portabletext/react";
 
 function SkillCard({ skill }: { skill: string }) {
   return (
-    <div className="capitalize bg-slate-800 px-3 py-1 rounded-md">{skill}</div>
+    <div className="capitalize dark:bg-slate-800 bg-slate-100 px-3 py-1 rounded-md">
+      {skill}
+    </div>
   );
 }
 
