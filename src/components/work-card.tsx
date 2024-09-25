@@ -17,7 +17,7 @@ export default function WorkCard({ work }: { work: WorkType }) {
     <div className="py-2">
       <div className="flex justify-between flex-1">
         {work.url && (
-          <Link className="link" href={work.url}>
+          <Link className="link" href={work.url} target="_blank">
             {work.companyName}
           </Link>
         )}
