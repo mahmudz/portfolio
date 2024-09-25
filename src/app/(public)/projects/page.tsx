@@ -1,5 +1,3 @@
-"use client";
-
 import { FeaturedProjectCard } from "@/components/feature-project-card";
 import { getProjects } from "@/sanity/sanity.query";
 
