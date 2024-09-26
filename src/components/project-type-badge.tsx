@@ -20,7 +20,13 @@ const variants = {
 };
 
 const labelVariant = {
-  notExpanded: { opacity: 0, padding: 0 },
+  notExpanded: {
+    opacity: 0,
+    padding: 0,
+    transition: {
+      duration: 0.1,
+    },
+  },
   expanded: {
     opacity: 1,
     padding: "2px 8px",
@@ -56,7 +62,7 @@ export default function ProjectTypeBadge({
   return (
     <button
       className="cursor-pointer group block"
-      onClick={() => setExpanded(true)}
+      onClick={() => setExpanded(!expanded)}
     >
       <motion.div
         animate={expanded ? "expanded" : "notExpanded"}
