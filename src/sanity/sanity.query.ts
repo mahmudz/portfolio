@@ -38,12 +38,13 @@ export async function getWorks(): Promise<WorkType[]> {
 
 export async function getProjects(): Promise<ProjectType[]> {
   return client.fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"] | order(featured desc) | order(year desc) {
     _id,
     name,
     tagline,
     "slug": slug.current,
     type,
+    year,
     projectUrl,
     "logo": logo.asset->url,
     }`
@@ -58,6 +59,7 @@ export async function getProject(slug: string): Promise<ProjectType> {
     tagline,
     "slug": slug.current,
     type,
+    year,
     projectUrl,
     "logo": logo.asset->url,
     "coverImage": coverImage.asset->url,

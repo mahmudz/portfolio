@@ -54,18 +54,20 @@ const types = {
 
 export default function ProjectTypeBadge({
   project,
+  expanded,
 }: {
   project: ProjectType;
+  expanded?: boolean;
 }) {
-  const [expanded, setExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(expanded);
 
   return (
     <button
       className="cursor-pointer group block"
-      onClick={() => setExpanded(!expanded)}
+      onClick={() => setIsExpanded(!isExpanded)}
     >
       <motion.div
-        animate={expanded ? "expanded" : "notExpanded"}
+        animate={isExpanded ? "expanded" : "notExpanded"}
         initial="notExpanded"
         variants={variants}
         className={cn(
