@@ -40,13 +40,13 @@ export default async function ProjectDetails({
           <div className="flex justify-between">
             {project.type && (
               <div className="text-muted-foreground flex gap-2">
-                Project Type: <ProjectTypeBadge project={project} expanded />
+                Type: <ProjectTypeBadge project={project} expanded />
               </div>
             )}
 
             {(project.year?.start || project.year?.end) && (
               <div className="text-muted-foreground">
-                Project Year:{" "}
+                Year:{" "}
                 {project.year.start &&
                   dateFormat(project.year.start, { year: "numeric" })}
                 {project.year.end &&
