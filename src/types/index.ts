@@ -28,15 +28,22 @@ export type WorkType = {
   endDate?: string;
 };
 
+export type ProjectTypes =
+  | "client-work"
+  | "company-project"
+  | "side-project"
+  | "open-source";
+
 export type ProjectType = {
   _id: string;
   name: string;
   tagline: string;
   slug: string;
-  type: "client-work" | "company-project" | "side-project" | "open-source";
+  type: ProjectTypes;
   logo: {
     image: string;
   };
+  year: { start?: string; end?: string };
   projectUrl: string;
   coverImage: string;
   alt: string;

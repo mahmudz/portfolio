@@ -29,6 +29,30 @@ const project = {
       options: { source: "name" },
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: "year",
+      title: "Project Year",
+      type: "document",
+      options: { columns: 2 },
+      fields: [
+        {
+          name: "start",
+          title: "Start Year",
+          type: "date",
+          options: {
+            dateFormat: "YYYY",
+          },
+        },
+        {
+          name: "end",
+          title: "End Year",
+          type: "date",
+          options: {
+            dateFormat: "YYYY",
+          },
+        },
+      ],
+    }),
     {
       title: "Type",
       name: "type",

@@ -4,4 +4,4 @@ import profile from "./profile";
 import project from "./project";
 import work from "./work";
 
-export const schemaTypes = [profile, article, work, project, blockContent];
+export const schema = [profile, article, work, project, blockContent];
