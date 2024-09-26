@@ -38,7 +38,7 @@ export async function getWorks(): Promise<WorkType[]> {
 
 export async function getProjects(): Promise<ProjectType[]> {
   return client.fetch(
-    groq`*[_type == "project"] | order(featured desc) | order(year desc) {
+    groq`*[_type == "project"] | order(year.start desc, year.end desc, featured desc) {
     _id,
     name,
     tagline,
