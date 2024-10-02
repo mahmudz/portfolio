@@ -1,4 +1,4 @@
-import { FeaturedProjectCard } from "@/components/feature-project-card";
+import { ProjectListCard } from "@/components/project-list-card";
 import { getProjects } from "@/sanity/sanity.query";
 
 export default async function ProjectsIndexPage() {
@@ -10,7 +10,7 @@ export default async function ProjectsIndexPage() {
 
       <div className="space-y-2">
         {projects.map((project, index) => (
-          <FeaturedProjectCard key={index} project={project} />
+          <ProjectListCard key={index} project={project} />
         ))}
       </div>
     </section>

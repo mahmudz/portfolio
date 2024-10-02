@@ -1,4 +1,4 @@
-import { FeaturedProjectCard } from "@/components/feature-project-card";
+import { ProjectListCard } from "@/components/project-list-card";
 import { getFeaturedProjects } from "@/sanity/sanity.query";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ export default async function ProjectsSection() {
 
       <div className="grid grid-cols-1 gap-2">
         {projects.map((project, index) => (
-          <FeaturedProjectCard key={index} project={project} />
+          <ProjectListCard key={index} project={project} />
         ))}
       </div>
     </section>

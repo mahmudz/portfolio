@@ -3,7 +3,7 @@ import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import ProjectTypeBadge from "./project-type-badge";
 
-export function FeaturedProjectCard({ project }: { project: ProjectType }) {
+export function ProjectListCard({ project }: { project: ProjectType }) {
   return (
     <div className="py-2 flex justify-between items-center">
       <div className="flex-1">
