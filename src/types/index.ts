@@ -6,6 +6,7 @@ export type ProfileType = {
   nickName: string;
   headline: string;
   email: string;
+  availableForWork: boolean;
   profileImage: {
     alt: string;
     image: string;

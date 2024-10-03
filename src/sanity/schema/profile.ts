@@ -61,6 +61,11 @@ const profile = {
       of: [{ type: "block" }],
     },
     {
+      name: "availableForWork",
+      title: "Available For Work",
+      type: "boolean",
+    },
+    {
       name: "resumeURL",
       title: "Upload Resume",
       type: "file",

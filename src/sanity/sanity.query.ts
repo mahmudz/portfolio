@@ -12,6 +12,7 @@ export async function getProfile(): Promise<ProfileType> {
       profileImage {alt, "image": asset->url},
       shortBio,
       location,
+      availableForWork,
       fullBio,
       email,
       "resumeURL": resumeURL.asset->url,
@@ -62,7 +63,7 @@ export async function getProject(slug: string): Promise<ProjectType> {
     year,
     projectUrl,
     "logo": logo.asset->url,
-    "coverImage": coverImage.asset->url,
+    coverImage,
     alt,
     description,
     }`,
@@ -74,17 +75,16 @@ export async function getProject(slug: string): Promise<ProjectType> {
 
 export async function getFeaturedProjects(): Promise<ProjectType[]> {
   return client.fetch(
-    groq`*[_type == "project" && featured == $featured][0...3]{
+    groq`*[_type == "project" && featured == $featured][0...4]{
       _id,
-    name,
-    tagline,
-    "slug": slug.current,
-    type,
-    projectUrl,
-    "logo": logo.asset->url,
-    coverImage,
-    alt,
-    description,
+      name,
+      tagline,
+      "slug": slug.current,
+      type,
+      projectUrl,
+      "logo": logo.asset->url,
+      "coverImage": coverImage.asset->url,
+      alt,
     }`,
     {
       featured: true,
