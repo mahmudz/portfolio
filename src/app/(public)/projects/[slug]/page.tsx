@@ -1,6 +1,7 @@
 import BackButton from "@/components/back-button";
 import ExternalLink from "@/components/external-link";
 import ProjectTypeBadge from "@/components/project-type-badge";
+import SanityImage from "@/components/ui/SanityImg";
 import { dateFormat } from "@/lib/utils";
 import { getProject } from "@/sanity/sanity.query";
 import { PortableText } from "@portabletext/react";
@@ -20,7 +21,9 @@ export default async function ProjectDetails({
 
       <section>
         {project.coverImage ? (
-          <img
+          <SanityImage
+            height={480}
+            width={720}
             src={project.coverImage}
             className="border rounded-md w-full"
             alt=""
