@@ -9,7 +9,7 @@ function AvailableForWork() {
       <div className="size-2 rounded-full bg-green-400 relative">
         <div className="size-2 bg-green-500 animate-ping z-10 absolute rounded-full"></div>
       </div>
-      <span className="text-sm text-muted-foreground">Available for work</span>
+      <span className="text-sm text-muted-foreground">Available for new projects</span>
     </Link>
   );
 }
