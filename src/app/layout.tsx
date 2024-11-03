@@ -10,10 +10,13 @@ const font = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Mahmudul Hasan",
-  description: "Maybe a good developer",
+  title: "Mahmudul Hasan | Web Expert",
+  description:
+    "Experienced Software Engineer specialized in web technologies. 6+ years of experience building web applications for clients across the globe, bringing digital ideas to life.",
+  keywords:
+    "mahmud,hasan,mahmudul hasab,mahmuddul hassan,software,engineer,engineering,developer,laravel developer,php developer,fullstack developer,javascript,typescript,react,nextjs",
   openGraph: {
-    title: "Mahmudul Hasan | Full Stack Developer",
+    title: "Mahmudul Hasan | Software engineer passionate about solutions",
   },
 };
 
