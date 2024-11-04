@@ -3,6 +3,7 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const font = Space_Grotesk({
   subsets: ["latin"],
@@ -17,6 +18,11 @@ export const metadata: Metadata = {
     "mahmud,hasan,mahmudul hasab,mahmuddul hassan,software,engineer,engineering,developer,laravel developer,php developer,fullstack developer,javascript,typescript,react,nextjs",
   openGraph: {
     title: "Mahmudul Hasan | Software engineer passionate about solutions",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@heyymahmud",
   },
 };
 
@@ -46,14 +52,16 @@ export default function RootLayout({
         data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID!}
       ></script>
       <body className={cn(font.className, "transition scroll-smooth")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <ScrollArea className="h-screen">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </ScrollArea>
       </body>
     </html>
   );
