@@ -35,7 +35,7 @@ export default function ActivityOverview({
         cx="50%"
         cy="50%"
         outerRadius="80%"
-        width={400}
+        width={370}
         height={280}
         data={stats}
       >
