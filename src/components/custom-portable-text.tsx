@@ -1,7 +1,7 @@
 import { PortableTextComponents } from "@portabletext/react";
 import CodeBlock from "./ui/code-block";
 import { cn, slugify } from "@/lib/utils";
-import HashScroll from "./HashScroll";
+import HashScroll from "./hash-scroll";
 import { ReactNode } from "react";
 
 const Heading = ({

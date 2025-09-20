@@ -6,7 +6,10 @@ export default async function WorksSection() {
 
   return (
     <section>
-      <h4 className="font-semibold pb-2">Work</h4>
+      <div className="pb-4 flex justify-between items-center gap-3">
+        <h4 className="font-semibold">Work</h4>
+        <div className="h-px flex-1 bg-slate-800"></div>
+      </div>
 
       <div className="space-y-2">
         {works.map((work, index) => (

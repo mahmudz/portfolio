@@ -7,8 +7,9 @@ export default async function ProjectsSection() {
 
   return (
     <section>
-      <div className="pb-4 flex justify-between items-center">
+      <div className="pb-4 flex justify-between items-center gap-3">
         <p className="font-semibold">Featured Projects</p>
+        <div className="h-px flex-1 bg-slate-800"></div>
         <Link className="link" href={"/projects"}>
           View all
         </Link>

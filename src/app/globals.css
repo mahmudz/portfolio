@@ -59,6 +59,14 @@
   }
 }
 
+.recharts-polar-grid-concentric {
+  @apply hidden;
+}
+
+.recharts-polar-angle-axis-tick-value {
+  @apply text-white !important;
+}
+
 @layer base {
   * {
     @apply border-border;

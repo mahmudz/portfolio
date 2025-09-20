@@ -9,8 +9,9 @@ export default async function ArticlesSection() {
     <div className="flex flex-col gap-8">
       {articles.length > 0 && (
         <section>
-          <div className="pb-2 flex justify-between items-center">
+          <div className="pb-4 flex justify-between items-center gap-3">
             <h4 className="font-semibold">Writings</h4>
+            <div className="h-px flex-1 bg-slate-800"></div>
             <Link className="link" href={"/articles"}>
               View all
             </Link>

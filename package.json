@@ -18,6 +18,8 @@
     "@sanity/code-input": "^4.1.4",
     "@sanity/vision": "^3.52.4",
     "@types/mdx": "^2.0.13",
+    "@types/recharts": "^2.0.1",
+    "cheerio": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.28",
@@ -28,6 +30,8 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-github-calendar": "^4.5.10",
+    "recharts": "^3.2.1",
     "sanity": "^3.52.4",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
