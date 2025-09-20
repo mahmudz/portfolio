@@ -54,7 +54,7 @@ const article = {
     }),
     defineField({
       name: "isPublished",
-      title: "PUBLISH POST",
+      title: "Published",
       type: "boolean",
       description: "Tick this if you will like to publish this post",
     }),

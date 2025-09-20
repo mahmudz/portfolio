@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function ArticleListCard({ article }: { article: ArticleType }) {
   return (
-    <div className="py-2 flex justify-between items-center">
+    <div className="py-2 flex justify-between">
       <div>
         <Link className="link" href={`/articles/${article.slug}`}>
           {article.title}
@@ -13,7 +13,7 @@ export function ArticleListCard({ article }: { article: ArticleType }) {
         </p>
       </div>
 
-      <time className="text-gray-500 dark:text-gray-400">
+      <time className="text-gray-500 dark:text-gray-400 text-sm">
         {Intl.DateTimeFormat("en", {
           day: "2-digit",
           month: "2-digit",
