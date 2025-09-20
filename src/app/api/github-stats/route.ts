@@ -30,16 +30,31 @@ export async function GET(req: NextRequest) {
         const decoded = rawData.replace(/&quot;/g, '"');
 
         let parsed;
-        
+
         try {
             parsed = JSON.parse(decoded);
         } catch {
             return Response.json({ error: "Failed to parse JSON from data-percentages" });
         }
 
-        parsed = Object.entries(parsed).map((item: any) => ({category: item[0], value: item[1]}))
-
-        return Response.json(parsed);
+        return Response.json([
+            {
+                "category": "Code review",
+                "value": parsed['Code review']
+            },
+            {
+                "category": "Issues",
+                "value": parsed['Issues']
+            },
+            {
+                "category": "Pull requests",
+                "value": parsed['Pull requests']
+            },
+            {
+                "category": "Commits",
+                "value": parsed['Commits']
+            }
+        ]);
     } catch (err: any) {
         return Response.json({ error: err.message || "Something went wrong" });
     }
