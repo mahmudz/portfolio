@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   keywords:
     "mahmud,hasan,mahmudul hasab,mahmuddul hassan,software,engineer,engineering,developer,laravel developer,php developer,fullstack developer,javascript,typescript,react,nextjs",
   openGraph: {
-    title: "Mahmudul Hasan | Software engineer passionate about solutions",
+    title: "Mahmudul Hasan | Software engineer passionate about building scalable solutions",
     type: "website",
   },
   twitter: {

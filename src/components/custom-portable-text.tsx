@@ -40,14 +40,6 @@ export const CustomPortableText: PortableTextComponents = {
     h4: ({ children }) => <Heading level={4}>{children}</Heading>,
   },
   marks: {
-    em: ({ children }) => (
-      <em className="font-incognito font-medium italic">{children}</em>
-    ),
-    strong: ({ children }) => (
-      <strong className="font-bold dark:text-zinc-300 text-zinc-700">
-        {children}
-      </strong>
-    ),
     code: ({ children }) => (
       <code className="font-incognito py-[0.15rem] px-1 rounded-sm font-medium dark:bg-primary-bg bg-secondary-bg dark:text-zinc-200 text-pink-500">
         {children}
@@ -57,9 +49,5 @@ export const CustomPortableText: PortableTextComponents = {
   list: {
     bullet: ({ children }) => <ul className="list-[square]">{children}</ul>,
     number: ({ children }) => <ol className="list-decimal">{children}</ol>,
-  },
-  listItem: {
-    bullet: ({ children }) => <li>{children}</li>,
-    number: ({ children }) => <li>{children}</li>,
   },
 };

@@ -1,6 +1,13 @@
 /* eslint-disable */
+import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from "recharts";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  ResponsiveContainer,
+} from "recharts";
 
 export default function ActivityOverview({
   year,
@@ -8,6 +15,7 @@ export default function ActivityOverview({
   year: number | undefined;
 }) {
   const [stats, setStats] = useState([]);
+  const {theme} = useTheme();
 
   const fetchStats = async () => {
     const params = new URLSearchParams();
@@ -29,39 +37,30 @@ export default function ActivityOverview({
   }, [year]);
 
   return (
-    <div>
+    <ResponsiveContainer width={320} height={280}>
       <RadarChart
         className="[&>svg]:outline-none"
         cx="50%"
         cy="50%"
-        outerRadius="80%"
-        width={370}
-        height={280}
+        outerRadius="70%"
         data={stats}
       >
         <PolarGrid gridType="circle" stroke="#79cb5d" strokeWidth={2} />
         <PolarAngleAxis
-          fill="white"
           dataKey="category"
-          tick={({
-            x = 0,
-            y = 0,
-            textAnchor,
-            index,
-            ...props
-          }) => {
+          tick={({ x = 0, y = 0, textAnchor, index, ...props }) => {
             const data = stats[index] as { category: string; value: number };
 
             return (
               <text
                 x={x}
-                y={index === 0 ? (Number(y) - 15) : (Number(y) + 5)}
+                y={index === 0 ? Number(y) - 15 : Number(y) + 5}
                 textAnchor={textAnchor}
                 fontSize={13}
                 fontWeight={500}
                 {...props}
               >
-                <tspan className="fill-muted-foreground">{data.category}</tspan>
+                <tspan className="fill-gray-800 dark:fill-white">{data.category}</tspan>
                 <tspan
                   x={x}
                   dy={"1rem"}
@@ -81,11 +80,12 @@ export default function ActivityOverview({
           label="string"
           name="Contributions"
           dataKey="value"
-          fill="#3b673a"
+          fill={theme === 'dark' ? "#3b673a" : "#88c257"}
           stroke="#79cb5d"
-          fillOpacity={0.9}
+          strokeWidth={2}
+          fillOpacity={theme === 'dark' ? 0.9 : 0.4}
         />
       </RadarChart>
-    </div>
+    </ResponsiveContainer>
   );
 }

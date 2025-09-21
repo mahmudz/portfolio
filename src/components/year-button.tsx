@@ -12,10 +12,10 @@ export default function YearButton({
   return (
     <button
       onClick={onClick}
-      className={`text-center px-2 py-1 border-b border-transparentk:hover:border-orange-700 hover:border-orange-200 duration-100 text-sm font-medium ${
+      className={`text-center hover:text-gray-400 px-2 py-1 border-b dark:hover:border-orange-200 hover:border-orange-400 duration-100 text-sm font-medium ${
         year === currentYear
-          ? "dark:bg-secondary-color bg-secondary-color dark:text-slate-400 text-white border-orange-200"
-          : "dark:bg-primary-bg dark:text-white text-slate-800"
+          ? "border-orange-400 dark:border-orange-200 text-gray-400"
+          : "dark:text-white"
       }`}
       title={`View Graph for the year ${year}`}
     >

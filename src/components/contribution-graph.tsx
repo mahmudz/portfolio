@@ -60,11 +60,11 @@ export default function ContributionGraph() {
       <div className="flex flex-wrap gap-2">
         <div
           className={cn(
-            `text-center px-2 py-1 border-b border-transparentk:hover:border-orange-700 hover:border-orange-200 duration-100 text-sm font-medium`,
+            `text-center px-2 py-1 border-b duration-100 text-sm font-medium`,
             {
-              "dark:bg-secondary-color bg-secondary-color dark:text-slate-400 text-white border-orange-200":
+              "border-orange-400 dark:border-orange-200 text-gray-400":
                 selectedYear == undefined,
-              "dark:bg-primary-bg dark:text-white text-slate-800":
+              "dark:text-white":
                 selectedYear != undefined,
             }
           )}
@@ -83,7 +83,7 @@ export default function ContributionGraph() {
         <Link
           href={"https://github.com/mahmudz"}
           target="_blank"
-          className={`flex justify-center items-center px-2 py-1 border-b border-transparentk:hover:border-orange-700 hover:border-orange-200 duration-100`}
+          className={`flex justify-center items-center px-2 py-1 border-b hover:border-[#88c257] duration-100`}
         >
           <GithubIcon size={17} />
         </Link>

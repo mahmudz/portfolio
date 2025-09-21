@@ -11,7 +11,7 @@ export default async function ArticlesSection() {
         <section>
           <div className="pb-4 flex justify-between items-center gap-3">
             <h4 className="font-semibold">Writings</h4>
-            <div className="h-px flex-1 bg-slate-800"></div>
+            <div className="h-px flex-1 dark:bg-gray-800 bg-border"></div>
             <Link className="link" href={"/articles"}>
               View all
             </Link>
