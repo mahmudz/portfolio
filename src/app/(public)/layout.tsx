@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import NavLogo from "@/components/nav-logo";
 import Link from "next/link";
 
@@ -26,6 +27,8 @@ export default function RootLayout({
         </div>
       </nav>
       <div className="max-w-3xl py-10 px-6 m-auto">{children}</div>
+
+      <Footer />
     </main>
   );
 }
