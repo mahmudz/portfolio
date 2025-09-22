@@ -1,4 +1,5 @@
 import { type ClassValue, clsx } from "clsx";
+import test from "node:test";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -14,6 +15,10 @@ export function dateFormat(
 }
 
 export function slugify(text: string | ReactNode) {
+  if (text instanceof Array) {
+    text = text?.[0]?.props.text
+  }
+
   return text
     ?.toString()
     .toLowerCase()

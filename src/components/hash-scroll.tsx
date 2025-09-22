@@ -1,4 +1,5 @@
 // "use client";
+import { slugify } from "@/lib/utils";
 import Link from "next/link";
 
 type props = {
@@ -6,27 +7,11 @@ type props = {
   event?: any;
 };
 
-export const slugify = (id: any) => {
-  if (id) {
-    id.toString()
-      .toLowerCase()
-      .replaceAll(/[^-\w]+/g, "-")
-      .replaceAll(/--+/g, "-")
-      .replace(/^-|-$/g, "");
-  }
-  return "";
-};
-
 export default function HashScroll({ text, event }: props) {
   return (
     <Link
       onClick={event}
-      href={`#${text
-        ?.toString()
-        .toLowerCase()
-        .replaceAll(/[^-\w]+/g, "-")
-        .replaceAll(/--+/g, "-")
-        .replace(/^-|-$/g, "")}`}
+      href={`#${slugify(text)}`}
     >
       {text}
     </Link>
