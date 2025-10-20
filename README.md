@@ -1,5 +1,7 @@
 # My Portfolio Website
 
+![mahmudz.dev](thumbnail.png "https://mahmudz.dev")
+
 This is a personal portfolio website built using **Next.js** for the frontend and **Sanity.io** as the content management system (CMS). It showcases my projects, skills, and experience as a developer, and it is fully customizable through Sanity Studio.
 
 ## Table of Contents
